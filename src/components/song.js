@@ -3,7 +3,8 @@ import React from "react";
 const Song = () => {
     return (
         <div className="song">
-            <h1>Song</h1>
+            <p>Image</p>
+            <p>Name</p>
         </div>
     )
 }
