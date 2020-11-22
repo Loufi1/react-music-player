@@ -1,12 +1,25 @@
-import React from "react";
+import React, {useRef} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faPlayCircle,
+    faPauseCircle,
     faStepForward,
     faStepBackward,
 } from '@fortawesome/free-solid-svg-icons'
 
-const Player = () => {
+const Player = ({playingSong, isPlaying, setIsPlaying}) => {
+    const audioRef = useRef(null);
+
+    const play = () => {
+        if (isPlaying) {
+            setIsPlaying(false);
+            audioRef.current.pause();
+        } else {
+            setIsPlaying(true);
+            audioRef.current.play();
+        }
+    }
+
     return (
         <div className="player">
             <div className="input">
@@ -16,9 +29,10 @@ const Player = () => {
             </div>
             <div className="control">
                 <FontAwesomeIcon size='2x' icon={faStepBackward} />
-                <FontAwesomeIcon size='2x' icon={faPlayCircle} />
+                <FontAwesomeIcon onClick={play} size='2x' icon={isPlaying ? faPauseCircle : faPlayCircle} />
                 <FontAwesomeIcon size='2x' icon={faStepForward} />
             </div>
+            <audio ref={audioRef} src={playingSong.url}/>
         </div>
     )
 }
