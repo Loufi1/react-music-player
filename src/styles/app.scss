@@ -4,5 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #383d3c;
+  font-family: 'Lato', sans-serif;
+}
+
+.app-body {
+  width: 70%;
+  margin-left: 30%;
+}
+
+@import "playlist";
 @import "player";
 @import "song";

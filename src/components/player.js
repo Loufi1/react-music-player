@@ -43,9 +43,15 @@ const Player = ({playingSong, isPlaying, setIsPlaying}) => {
                 <p>{getTime(duration)}</p>
             </div>
             <div className="control">
-                <FontAwesomeIcon size='2x' icon={faStepBackward} />
-                <FontAwesomeIcon onClick={play} size='2x' icon={isPlaying ? faPauseCircle : faPlayCircle} />
-                <FontAwesomeIcon size='2x' icon={faStepForward} />
+                <div className='circle'>
+                    <FontAwesomeIcon size='2x' icon={faStepBackward} />
+                </div>
+                <div className="circle">
+                    <FontAwesomeIcon onClick={play} size='2x' icon={isPlaying ? faPauseCircle : faPlayCircle} />
+                </div>
+                <div className="circle">
+                    <FontAwesomeIcon size='2x' icon={faStepForward} />
+                </div>
             </div>
             <audio onLoadedMetadata={updateTime} onTimeUpdate={updateTime} ref={audioRef} src={playingSong.url}/>
         </div>

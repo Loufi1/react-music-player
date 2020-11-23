@@ -4,6 +4,7 @@ import Song from "./components/song";
 import getMusics from "./utils/musics";
 
 import './styles/app.scss';
+import Playlist from "./components/playlist";
 
 function App() {
     const [songs, setSongs] = useState(getMusics());
@@ -12,12 +13,15 @@ function App() {
 
     return (
         <div>
-            <Song playingSong={playingSong}/>
-            <Player
-                playingSong={playingSong}
-                isPlaying={isPlaying}
-                setIsPlaying={setIsPlaying}
-            />
+            <div className="app-body">
+                <Song playingSong={playingSong}/>
+                <Player
+                    playingSong={playingSong}
+                    isPlaying={isPlaying}
+                    setIsPlaying={setIsPlaying}
+                />
+            </div>
+            <Playlist songs={songs}/>
         </div>
     );
 }
