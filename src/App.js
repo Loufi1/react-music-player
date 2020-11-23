@@ -7,7 +7,7 @@ import './styles/app.scss';
 import Playlist from "./components/playlist";
 
 function App() {
-    const [songs, setSongs] = useState(getMusics());
+    const [songs] = useState(getMusics());
     const [playingSong, setPlayingSong] = useState(songs[0]);
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(null);
