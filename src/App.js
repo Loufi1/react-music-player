@@ -21,6 +21,8 @@ function App() {
                     isPlaying={isPlaying}
                     setIsPlaying={setIsPlaying}
                     audioRef={audioRef}
+                    songs={songs}
+                    setPlayingSong={setPlayingSong}
                 />
             </div>
             <Playlist

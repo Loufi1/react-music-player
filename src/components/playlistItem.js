@@ -2,17 +2,11 @@ import React from "react";
 
 const PlaylistItem = ({song, setPlayingSong, audioRef, isPlaying}) => {
 
-    const playSong = () => {
+    const playSong = async () => {
+        await setPlayingSong(song);
         if (isPlaying) {
-            const playPromise = audioRef.current.play();
-
-            if (playPromise !== undefined) {
-                playPromise.then(audio => {
-                    audioRef.current.play();
-                })
-            }
+            audioRef.current.play();
         }
-        setPlayingSong(song);
     }
 
     return (

@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import getTime from "../utils/formatTime";
 
-const Player = ({playingSong, isPlaying, setIsPlaying, audioRef}) => {
+const Player = ({playingSong, isPlaying, setIsPlaying, audioRef, songs, setPlayingSong}) => {
     const [elapsedTime, setElapsedTime] = useState(0);
     const [duration, setDuration] = useState(0);
 
@@ -34,6 +34,28 @@ const Player = ({playingSong, isPlaying, setIsPlaying, audioRef}) => {
         setElapsedTime(e.target.value);
     }
 
+    const prev = async () => {
+        if (playingSong.id > 0)
+            await setPlayingSong(songs[playingSong.id - 1])
+        else
+            await setPlayingSong(songs[songs.length - 1]);
+
+        if (isPlaying) {
+            audioRef.current.play();
+        }
+    }
+
+    const next = async () => {
+        if (playingSong.id < songs.length - 1)
+            await setPlayingSong(songs[playingSong.id + 1])
+        else
+            await setPlayingSong(songs[0]);
+
+        if (isPlaying) {
+            audioRef.current.play();
+        }
+    }
+
     return (
         <div className="player">
             <div className="input">
@@ -43,16 +65,16 @@ const Player = ({playingSong, isPlaying, setIsPlaying, audioRef}) => {
             </div>
             <div className="control">
                 <div className='circle'>
-                    <FontAwesomeIcon size='2x' icon={faStepBackward} />
+                    <FontAwesomeIcon onClick={prev} size='2x' icon={faStepBackward} />
                 </div>
                 <div className="circle">
                     <FontAwesomeIcon onClick={play} size='2x' icon={isPlaying ? faPauseCircle : faPlayCircle} />
                 </div>
                 <div className="circle">
-                    <FontAwesomeIcon size='2x' icon={faStepForward} />
+                    <FontAwesomeIcon onClick={next} size='2x' icon={faStepForward} />
                 </div>
             </div>
-            <audio onLoadedMetadata={updateTime} onTimeUpdate={updateTime} ref={audioRef} src={playingSong.url}/>
+            <audio onEnded={next} onLoadedMetadata={updateTime} onTimeUpdate={updateTime} ref={audioRef} src={playingSong.url}/>
         </div>
     )
 }
