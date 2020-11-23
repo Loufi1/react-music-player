@@ -5,7 +5,7 @@ const getMusics = () => {
                 id: 0,
                 name: 'CORS',
                 artist: 'Loufi',
-                url: 'http://localhost:8000/Loufi-CORS.mp3',
+                url: 'http://' + process.env.REACT_APP_SERVER_IP + '/Loufi-CORS.mp3',
                 coverUrl: 'https://i1.sndcdn.com/artworks-zTMazAz5P23zRzIT-GxJlrA-t500x500.jpg',
                 colors: ['#111111', '#D81212'],
                 active: true,
@@ -14,12 +14,20 @@ const getMusics = () => {
                 id: 1,
                 name: 'Feeling Good',
                 artist: 'Loufi',
-                url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
+                url: 'http://' + process.env.REACT_APP_SERVER_IP + '/Loufi-Feeling_Good.mp3',
                 coverUrl: 'https://i1.sndcdn.com/artworks-4noRuznX3eS1bP6q-FRvdAg-t500x500.jpg',
                 colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
                 active: false,
             },
-            {
+        ]
+    )
+}
+
+export default getMusics;
+
+
+/*
+{
                 id: 2,
                 name: 'Losing Myself',
                 artist: 'Loufi',
@@ -55,8 +63,4 @@ const getMusics = () => {
                 colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
                 active: false,
             },
-        ]
-    )
-}
-
-export default getMusics;
+ */
