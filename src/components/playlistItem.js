@@ -17,10 +17,10 @@ const PlaylistItem = ({song, setPlayingSong, audioRef, isPlaying}) => {
 
     return (
         <div className="playlist-item" onClick={playSong}>
-            <img alt='' src={song.coverUrl}/>
             <div>
                 <h2>{song.artist} - {song.name}</h2>
             </div>
+            <img alt='' src={song.coverUrl}/>
         </div>
     )
 }
