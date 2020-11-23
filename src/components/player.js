@@ -30,8 +30,6 @@ const Player = ({playingSong, isPlaying, setIsPlaying}) => {
 
     const updateCursor = (e) => {
         audioRef.current.currentTime = e.target.value;
-        console.log(e.target.value) // equal 15
-        console.log(audioRef.current.currentTime) // equal 0
         setElapsedTime(e.target.value);
     }
 

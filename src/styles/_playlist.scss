@@ -7,7 +7,46 @@
 
   border-bottom-right-radius: 50px;
 
-  background: #383d3c;
-  box-shadow:  41px 41px 82px #303433,
-  -41px -41px 82px #404645;
+  background: linear-gradient(145deg, #252929, #2c3130);
+  box-shadow:  41px 41px 82px #151717,
+  -41px -41px 82px #3e4544;
+
+  overflow: auto;
+}
+
+.playlist-item {
+  width: 90%;
+  height: 100px;
+  margin: 5% auto;
+
+  border-radius: 20px;
+
+  background: #292e2d;
+  box-shadow:  1px 19px 37px #151717,
+  -19px -19px 37px #3e4544;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    border-radius: 20px;
+    height: 100%;
+  }
+
+  div {
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    color: white;
+  }
+}
+
+.playlist-item:hover {
+  cursor: pointer;
+
+  background: #292e2d;
+  box-shadow: inset 19px 19px 37px #151717,
+  inset -19px -19px 37px #3e4544;
 }

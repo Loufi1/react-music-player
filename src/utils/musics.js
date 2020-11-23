@@ -18,7 +18,43 @@ const getMusics = () => {
                 coverUrl: 'https://i1.sndcdn.com/artworks-4noRuznX3eS1bP6q-FRvdAg-t500x500.jpg',
                 colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
                 active: false,
-            }
+            },
+            {
+                id: 3,
+                name: 'Losing Myself',
+                artist: 'Loufi',
+                url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
+                coverUrl: 'https://i1.sndcdn.com/artworks-0Zf8qZvcvmqFTPAO-sda63A-t500x500.jpg',
+                colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
+                active: false,
+            },
+            {
+                id: 4,
+                name: '404',
+                artist: 'Loufi',
+                url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
+                coverUrl: 'https://i1.sndcdn.com/artworks-OBkF8xyQgfd8i2aZ-NTdvWw-t500x500.jpg',
+                colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
+                active: false,
+            },
+            {
+                id: 5,
+                name: 'D4rk M4t3r',
+                artist: 'R3itrOff',
+                url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
+                coverUrl: 'https://i1.sndcdn.com/artworks-MSb9qG9zEvzKXfDc-gvDlQg-t500x500.jpg',
+                colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
+                active: false,
+            },
+            {
+                id: 6,
+                name: 'The V01d',
+                artist: 'R3itrOff',
+                url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
+                coverUrl: 'https://i1.sndcdn.com/artworks-MSb9qG9zEvzKXfDc-gvDlQg-t500x500.jpg',
+                colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
+                active: false,
+            },
         ]
     )
 }
