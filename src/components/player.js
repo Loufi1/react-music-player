@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faPlayCircle,
@@ -8,8 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import getTime from "../utils/formatTime";
 
-const Player = ({playingSong, isPlaying, setIsPlaying}) => {
-    const audioRef = useRef(null);
+const Player = ({playingSong, isPlaying, setIsPlaying, audioRef}) => {
     const [elapsedTime, setElapsedTime] = useState(0);
     const [duration, setDuration] = useState(0);
 
@@ -24,8 +23,10 @@ const Player = ({playingSong, isPlaying, setIsPlaying}) => {
     }
 
     const updateTime = (e) => {
-        setDuration(e.target.duration);
-        setElapsedTime(e.target.currentTime);
+        if (!isNaN(e.target.duration)) {
+            setDuration(e.target.duration);
+            setElapsedTime(e.target.currentTime);
+        }
     }
 
     const updateCursor = (e) => {

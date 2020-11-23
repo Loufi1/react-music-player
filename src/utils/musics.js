@@ -2,7 +2,7 @@ const getMusics = () => {
     return(
         [
             {
-                id: 1,
+                id: 0,
                 name: 'CORS',
                 artist: 'Loufi',
                 url: 'http://localhost:8000/Loufi-CORS.mp3',
@@ -11,7 +11,7 @@ const getMusics = () => {
                 active: true,
             },
             {
-                id: 2,
+                id: 1,
                 name: 'Feeling Good',
                 artist: 'Loufi',
                 url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
@@ -20,7 +20,7 @@ const getMusics = () => {
                 active: false,
             },
             {
-                id: 3,
+                id: 2,
                 name: 'Losing Myself',
                 artist: 'Loufi',
                 url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
@@ -29,7 +29,7 @@ const getMusics = () => {
                 active: false,
             },
             {
-                id: 4,
+                id: 3,
                 name: '404',
                 artist: 'Loufi',
                 url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
@@ -38,7 +38,7 @@ const getMusics = () => {
                 active: false,
             },
             {
-                id: 5,
+                id: 4,
                 name: 'D4rk M4t3r',
                 artist: 'R3itrOff',
                 url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
@@ -47,7 +47,7 @@ const getMusics = () => {
                 active: false,
             },
             {
-                id: 6,
+                id: 5,
                 name: 'The V01d',
                 artist: 'R3itrOff',
                 url: 'http://localhost:8000/Loufi-Feeling_Good.mp3',
