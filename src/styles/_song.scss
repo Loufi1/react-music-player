@@ -12,7 +12,6 @@
 
   img {
     padding: 1rem;
-
     border-radius: 50px;
     background: #383d3c;
     box-shadow:  20px 20px 40px #282c2b,
@@ -21,5 +20,22 @@
 
   img:hover {
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .song {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    img {
+      height: auto;
+      width: 70%;
+    }
   }
 }

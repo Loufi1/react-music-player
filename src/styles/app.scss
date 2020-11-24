@@ -14,6 +14,19 @@ body {
   margin-left: 10%;
 }
 
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .app-body {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+
 @import "playlist";
 @import "player";
 @import "song";

@@ -96,3 +96,17 @@
   box-shadow:  7px 7px 15px #282c2b,
   -7px -7px 15px #484e4d;
 }
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .input {
+    width: 90%;
+  }
+
+  .control {
+    width: 90%;
+  }
+}

@@ -19,6 +19,33 @@ const getMusics = () => {
                 colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
                 active: false,
             },
+            {
+                id: 2,
+                name: 'Feeling Good',
+                artist: 'Loufi',
+                url: process.env.REACT_APP_SERVER_IP + '/Loufi-Feeling_Good.mp3',
+                coverUrl: 'https://i1.sndcdn.com/artworks-4noRuznX3eS1bP6q-FRvdAg-t500x500.jpg',
+                colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
+                active: false,
+            },
+            {
+                id: 3,
+                name: 'Feeling Good',
+                artist: 'Loufi',
+                url: process.env.REACT_APP_SERVER_IP + '/Loufi-Feeling_Good.mp3',
+                coverUrl: 'https://i1.sndcdn.com/artworks-4noRuznX3eS1bP6q-FRvdAg-t500x500.jpg',
+                colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
+                active: false,
+            },
+            {
+                id: 4,
+                name: 'Feeling Good',
+                artist: 'Loufi',
+                url: process.env.REACT_APP_SERVER_IP + '/Loufi-Feeling_Good.mp3',
+                coverUrl: 'https://i1.sndcdn.com/artworks-4noRuznX3eS1bP6q-FRvdAg-t500x500.jpg',
+                colors: ['#443665', '#cd91ae', '#647de3', '#9c6c94'],
+                active: false,
+            },
         ]
     )
 }
